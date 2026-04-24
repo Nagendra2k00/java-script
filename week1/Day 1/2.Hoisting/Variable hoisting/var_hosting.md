@@ -1,8 +1,15 @@
-Variable Hoisting :-
-    Var Hoisting is a process in which the declaration of a variable is moved to the top of its scope during the creation phase.
-    The value of the variable is initialized to 'undefined' during the creation phase.
-    The value of the variable is updated to the actual value during the execution phase.
+# Variable Hoisting
 
-types :-
-    1. var hoisting
-    2. let and const hoisting
+Variable hoisting means JavaScript registers variable declarations during the creation phase.
+
+## `var` Hoisting
+
+- The declaration is hoisted.
+- It is initialized with `undefined` during creation.
+- Value assignment happens later during execution.
+
+## `let` and `const` Hoisting
+
+- Their declarations are also hoisted.
+- They are **not** initialized during creation.
+- They stay in the Temporal Dead Zone (TDZ) until declaration line is reached.

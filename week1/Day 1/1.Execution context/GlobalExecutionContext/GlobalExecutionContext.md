@@ -1,32 +1,25 @@
-Global Execution Context (GEC) :-
-    GEC is a default environment where javascript code is executed, when program starts.
-    created before any function is called and exists for the life time.
+# Global Execution Context (GEC)
 
-when js starts, it creates GEC and performs 2 phases
-    1. creation phase
-    2. execution phase
+Global Execution Context is the default environment where JavaScript runs when a program starts.
 
+It is created before any function call and lives for the lifetime of the program.
 
-creation phase :-
-    1. create global object
-         - Browser -> window
-         - Node.js -> global
-    
-    2. creates "this"
-         - in global scope
-            this === window  //true (Browser)
-    
-    3. Allocates the memory for variables
-         var           -> undefined
-         let / const   -> unintialized (TDZ)
+When JavaScript starts, it creates GEC in two phases.
 
-    4. stores function declaration
+## 1) Creation phase
 
+1. Creates the global object  
+   - Browser -> `window`  
+   - Node.js -> `global`
+2. Sets up global `this`  
+   - In browsers, `this === window` at global scope
+3. Allocates memory for declarations  
+   - `var` -> `undefined`  
+   - `let` and `const` -> uninitialized (TDZ)
+4. Stores function declarations in memory
 
-execution phase :-
-    1. Assigns values to variables
-    2. executes statements
-    3. creates function excution context when functions are called
+## 2) Execution phase
 
-
-
+1. Assigns runtime values to variables
+2. Executes statements
+3. Creates Function Execution Contexts when functions are called

@@ -1,33 +1,26 @@
-An Execution context is the environment where javascript evaluates and executes code.
+# Execution Context
 
-there are 3 types :-
-    1. Global Execution context (GEC)
-    2. Function execution context (FEC)
+An execution context is the environment where JavaScript evaluates and executes code.
 
+## Types
 
-only one context run at a time while other wait in stack.  
+1. Global Execution Context (GEC)
+2. Function Execution Context (FEC)
 
+Only one execution context runs at a time.  
+Other contexts wait in the call stack.
 
+## Phases of Every Execution Context
 
-Every execution context is created in two phases:
-    1. Creation Phase
-    2. Execution phase
+### 1) Creation phase
 
+This is also called the setup phase. JavaScript scans code and prepares memory:
 
+1. Allocates memory for variables
+2. Registers function declarations
+3. Sets up scope information
+4. Determines `this`
 
-creation phase :-
-    this is also called as setup phase.
-    js scans the code and prepares memory.
+### 2) Execution phase
 
-    here it 
-        1. allocates memory for variables.
-        2. register the function declarations.
-        3. set up scope info.
-        4. Determines "this".
-
-
-Execution phase :-
-    here js runs the code line by line, using what it prepared earlier
-
-
-
+JavaScript runs code line by line using what was prepared in the creation phase.

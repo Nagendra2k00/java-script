@@ -1,7 +1,10 @@
-Hoisting :-
-    Hoisting is not “moving code up.”
-    Hoisting is memory allocation during the creation phase.
+# Hoisting
 
-Types :-
-    1. Variable Hoisting
-    2. Function Hoisting
+Hoisting is **not** physically moving code upward.
+
+It is JavaScript's behavior during the creation phase, where declarations are processed and memory is allocated before execution starts.
+
+## Types
+
+1. Variable hoisting
+2. Function hoisting

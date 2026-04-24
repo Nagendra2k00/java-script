@@ -1,24 +1,38 @@
-Function Declaration Hoisting :-
-    Function Declaration Hoisting is a process in which the declaration of a function is moved to the top of its scope during the creation phase.
-    The value of the function is initialized to the actual function during the creation phase.
-    The value of the function is updated to the actual function during the execution phase.
+# Function Declaration Hoisting
 
-Step 1 :-
-    Creation phase:
-        Memory is allocated for the function.
-        The value of the function is initialized to the actual function.
-        Entire function stored in memory
+Function declaration hoisting means JavaScript makes function declarations available during the creation phase of the execution context.
 
-Step 2 :-
-    Execution phase:
-        The value of the function is updated to the actual function.
-        The value of the function is logged to the console.
+## Phases
 
-Example :-
-    console.log(a);
-    function a() {
-        console.log("Hello");
-    }
+### 1) Creation phase
 
-Output :-
-    Hello
+- Memory is allocated for the function.
+- The full function declaration is stored in memory.
+- The function can be called even before its line appears in code.
+
+### 2) Execution phase
+
+- JavaScript executes statements line by line.
+- Calling the function works because it was already available from the creation phase.
+
+## Example
+
+```js
+console.log(a);
+
+function a() {
+  console.log("Hello");
+}
+```
+
+## Output
+
+```txt
+[Function: a]
+```
+
+If you call `a();`, then the output is:
+
+```txt
+Hello
+```
